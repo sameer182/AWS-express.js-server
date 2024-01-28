@@ -250,7 +250,11 @@ app.use((err, req, res, next) => {
     res.status(500).send("Something is broken.");
 });
 
-app.listen(PORT, () => {
-    console.log(`The server is running on port ${PORT}`);
+// app.listen(PORT, () => {
+//     console.log(`The server is running on port ${PORT}`);
   
+// });
+const port = process.env.PORT || 4001;
+app.listen(port, function() {
+ console.log("App started on port: " + port);
 });
