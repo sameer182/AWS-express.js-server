@@ -1,14 +1,14 @@
-import express from "express"; 
-import bodyParser from "body-parser";
-import path from "path";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-import fs from "fs";
-import cors from "cors";
-import morgan from "morgan";
-import { MongoClient } from "mongodb";
-import PropertiesReader from "properties-reader";
-import { ObjectId } from "mongodb";
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+const { fileURLToPath } = require("url");
+const { dirname } = require("path");
+const fs = require("fs");
+const cors = require("cors");
+const morgan = require("morgan");
+const { MongoClient } = require("mongodb");
+const PropertiesReader = require("properties-reader");
+const { ObjectId } = require("mongodb");
 
 
 
