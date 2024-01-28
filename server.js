@@ -18,6 +18,7 @@ const __dirname = dirname(__filename);
 const app = express();
 app.use(cors());
 app.use(morgan('short'));
+const PORT = 4001;
 
 
 //For better Json view in browser
@@ -250,11 +251,11 @@ app.use((err, req, res, next) => {
     res.status(500).send("Something is broken.");
 });
 
-// app.listen(PORT, () => {
-//     console.log(`The server is running on port ${PORT}`);
+app.listen(PORT, () => {
+    console.log(`The server is running on port ${PORT}`);
   
-// });
-const port = process.env.PORT || 4001;
-app.listen(port, function() {
- console.log("App started on port: " + port);
 });
+// const port = process.env.PORT || 4001;
+// app.listen(port, function() {
+//  console.log("App started on port: " + port);
+// });
