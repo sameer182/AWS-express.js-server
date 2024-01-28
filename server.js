@@ -18,7 +18,7 @@ const __dirname = dirname(__filename);
 const app = express();
 app.use(cors());
 app.use(morgan('short'));
-const PORT = 4001;
+
 
 //For better Json view in browser
 app.set('json spaces', 3);
