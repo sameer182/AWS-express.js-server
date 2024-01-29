@@ -31,6 +31,9 @@ let ordersCollection;
 // Allow access to files from root directory
 app.use(express.static(__dirname));
 
+// Serve static images from the 'pic' directory
+app.use('/pic', express.static(path.join(__dirname, 'pic')));
+
 // Static file middleware for lessons images
 app.use("/pic/:imageName", (req, res, next) => {
   const imageName = req.params.imageName;
