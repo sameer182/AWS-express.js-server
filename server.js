@@ -231,8 +231,8 @@ app.delete('/collections/:collectionName/:lessonId', async (req, res) => {
 });
 
 //-----------Search using webservice-----------//
-app.get('/:collectionName/search', async (req, res) => {
-  const query = req.query.q;
+app.get('/:collectionName/search/:query', async (req, res) => {
+  const query = req.params.query;
   const results = await req.collection.find({
       $or: [
           { title: { $regex: new RegExp(query, 'i') } },
@@ -241,7 +241,8 @@ app.get('/:collectionName/search', async (req, res) => {
   }).toArray();
 
   res.json(results);
-}); 
+});
+
 
 
 
